@@ -340,9 +340,6 @@ def Imp_Img():
     st.markdown(Img_Header_css, unsafe_allow_html=True)
     custom_css = """
         <style>
-        img {
-            border: 5px solid #555;
-        }
         .centered-image-container {
             display: flex;
             justify-content: center;
