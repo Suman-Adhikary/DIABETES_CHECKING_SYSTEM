@@ -8,3 +8,4 @@ streamlit_lottie
 requests
 path
 scikit-learn
+pathlib

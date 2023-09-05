@@ -5,18 +5,12 @@ from streamlit_lottie import st_lottie
 import json, requests
 import plotly.express as px
 import sys, path
+from pathlib import Path
 
 
-dir = path.Path(__file__)
-sys.path.append(dir.parent.parent)
-
-@st.cache_data()
-def Data(path):
-    with open(path, 'rb') as data:
-        Dataframe = pd.read_csv(data)
-        return Dataframe
-    
-Data('./diabetes.csv')    
+path = Path(__file__).parent / './diabetes.csv'
+dataset = pd.read_csv(path)
+# print(dataset)
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
