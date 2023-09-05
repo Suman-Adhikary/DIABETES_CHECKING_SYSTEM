@@ -209,9 +209,8 @@ def Feature_Viz():
     with Col2:
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Heart_Diabetes, unsafe_allow_html=True)
-        dataset["heart_disease"] = dataset['heart_disease'].map({1 : 'Yes', 0 : 'No'})
-        df = dataset.groupby(by=["heart_disease", "diabetes"]).size().reset_index(name="counts")
-        fig = px.bar(data_frame=df, x="heart_disease", y="counts", color="diabetes", barmode='stack', labels={'diabetes' : 'Diabetes', 'heart_disease' : 'Heart Disease', 'counts' : 'Count'})
+        HDD = '../Dataset/HeartDisease_Vs_Diabetes.csv'
+        fig = px.bar(data_frame=HDD, x="heart_disease", y="counts", color="diabetes", barmode='stack', labels={'diabetes' : 'Diabetes', 'heart_disease' : 'Heart Disease', 'counts' : 'Count'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig) 
 
@@ -224,9 +223,8 @@ def Feature_Viz():
     with Col1:
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Hyper_Diabetes, unsafe_allow_html=True)
-        dataset["hypertension"] = dataset['hypertension'].map({1 : 'Yes', 0 : 'No'})
-        df = dataset.groupby(by=["hypertension", "diabetes"]).size().reset_index(name="counts")
-        fig = px.bar(data_frame=df, x="hypertension", y="counts", color="diabetes", barmode='stack', labels={"diabetes" : 'Diabetes', 'counts' : 'Count', 'hypertension' : 'Hypertension'})
+        HPD = '../Dataset/Hypertension_Vs_Diabetes.csv'
+        fig = px.bar(data_frame=HPD, x="hypertension", y="counts", color="diabetes", barmode='stack', labels={"diabetes" : 'Diabetes', 'counts' : 'Count', 'hypertension' : 'Hypertension'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)       
 
@@ -239,8 +237,8 @@ def Feature_Viz():
     with Col2:
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Heart_Diabetes, unsafe_allow_html=True)
-        df = dataset.groupby(by=["smoking_history", "diabetes"]).size().reset_index(name="counts")
-        fig = px.bar(data_frame=df, x="smoking_history", y="counts", color="diabetes", barmode='stack', labels={'diabetes' : 'Diabetes', 'smoking_history' : 'Smoking History', 'counts' : 'Count'})
+        SHH = '../Dataset/SmokingHistory_Vs_Diabetes.csv'
+        fig = px.bar(data_frame=SHH, x="smoking_history", y="counts", color="diabetes", barmode='stack', labels={'diabetes' : 'Diabetes', 'smoking_history' : 'Smoking History', 'counts' : 'Count'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)   
 
