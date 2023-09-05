@@ -6,9 +6,9 @@ import json, requests
 import plotly.express as px
 import sys, path
 
-dir = path.Path(__file__).abspath()
+dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
-dataset = pd.read_csv('./diabetes.csv')
+dataset = pd.read_csv('../Dataset/diabetes.csv')
 
 
 ########################################################### Setup Page Configer ######################################################
