@@ -10,8 +10,8 @@ import sys, path, os
 # sys.path.append(dir.parent.parent)
 # dataset = pd.read_csv('../Dataset/diabetes.csv')
 
-dataset = os.getcwd() + './diabetes.csv'
-
+dataset = os.getcwd() + '\diabetes.csv'
+dataset = pd.read_csv(dataset)
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
