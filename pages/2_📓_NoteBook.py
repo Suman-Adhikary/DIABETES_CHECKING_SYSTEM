@@ -4,6 +4,10 @@ import pandas as pd
 from streamlit_lottie import st_lottie
 import json, requests
 import plotly.express as px
+import sys, path
+
+dir = path.Path(__file__)
+sys.path.append(dir.parent.parent)
 
 
 ########################################################### Setup Page Configer ######################################################
@@ -66,7 +70,7 @@ if __name__ == '__main__':
 
 
 ########################################################## Datase and Information #######################################################
-dataset = pd.read_csv(r'C:\Users\suman\OneDrive\Desktop\My\Work\Tools\VS code\Streamlit\Main_page\Dataset\diabetes.csv')
+dataset = pd.read_csv('../Dataset/diabetes.csv')
 @st.cache_data(experimental_allow_widgets=True)
 def Data():
     Col1, Col2 = st.columns(2)
