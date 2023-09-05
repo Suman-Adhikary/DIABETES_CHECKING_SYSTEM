@@ -1,7 +1,7 @@
 ########################################### Import Libraries ############################################################
 import streamlit as st
 from pickle import load
-import base64
+import base64, os
 import os
 
 
@@ -27,7 +27,7 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 if __name__ == '__main__':
-    add_bg_from_local(os.path.abspath("C:\\Users\\suman\\OneDrive\\Desktop\\My\\Git\\Diabetes Check\\Images\\Main.jpg"))  
+    add_bg_from_local("../Diabetes Check/Dataset/diabetes.csv")  
 
 
 ############################################ Setup Page Header ###########################################################
