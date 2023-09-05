@@ -8,9 +8,9 @@ import sys, path
 from pathlib import Path
 
 
+######################################################### Setup File Directory ######################################################
 path = Path(__file__).parent / './diabetes.csv'
 dataset = pd.read_csv(path)
-# print(dataset)
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
