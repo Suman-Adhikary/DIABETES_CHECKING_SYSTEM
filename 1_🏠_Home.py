@@ -26,7 +26,7 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 if __name__ == '__main__':
-    add_bg_from_local(open(r"C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\Images\Main.jpg"))  
+    add_bg_from_local(open("C:\\Users\\suman\\OneDrive\\Desktop\\My\\Git\\Diabetes Check\\Images\\Main.jpg"))  
 
 
 ############################################ Setup Page Header ###########################################################
