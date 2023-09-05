@@ -8,7 +8,9 @@ import sys, path
 
 dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
-dataset = pd.read_csv('../Dataset/diabetes.csv')
+with open('../Dataset/diabetes.csv', 'rb') as data:
+    dataset = pd.read_csv(data.read())
+# dataset = pd.read_csv('../Dataset/diabetes.csv')
 
 
 ########################################################### Setup Page Configer ######################################################
