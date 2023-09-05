@@ -8,6 +8,7 @@ import sys, path
 
 dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
+dataset = pd.read_csv('../Dataset/diabetes.csv')
 
 
 ########################################################### Setup Page Configer ######################################################
@@ -70,7 +71,7 @@ if __name__ == '__main__':
 
 
 ########################################################## Datase and Information #######################################################
-dataset = pd.read_csv(open('./diabetes.csv', 'rb'))
+
 @st.cache_data(experimental_allow_widgets=True)
 def Data():
     Col1, Col2 = st.columns(2)
