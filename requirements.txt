@@ -1,5 +1,5 @@
 streamlit
-pickle == 4.0*
+pickleshare
 base64
 pandas
 json
