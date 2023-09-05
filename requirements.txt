@@ -1,0 +1,6 @@
+streamlit
+pickle
+base64
+pandas
+json
+plotly
