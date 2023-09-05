@@ -9,7 +9,7 @@ import sys, path, os
 dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
 
-with open(r'C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\pages\diabetes.csv', 'rb') as data:
+with open(r"C:\Users\suman\Downloads\diabetes.csv", 'rb') as data:
     dataset = pd.read_csv(data)
 
 ########################################################### Setup Page Configer ######################################################
