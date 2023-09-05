@@ -5,3 +5,4 @@ pandas
 json5
 plotly
 streamlit_lottie
+requests

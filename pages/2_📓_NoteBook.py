@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 from streamlit_lottie import st_lottie
-import json
+import json, requests
 import plotly.express as px
 
 
@@ -13,11 +13,13 @@ st.write('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_h
 
 ######################################################### Streamlit lottie Animation #################################################
 @st.cache_data()
-def load_lottiefile(filepath: str):
-    with open(filepath, 'r') as f:
-        return json.load(f)
+def load_lottieurl(url: str):
+        r = requests.get(url)
+        if r.status_code != 200:
+            return None
+        return r.json()
 
-lottie_book = load_lottiefile(r'C:\Users\suman\OneDrive\Desktop\My\Work\Tools\VS code\Streamlit\Main_page\Lottie File\Animation.json')
+lottie_book = load_lottieurl("https://lottie.host/e5bf3a18-6153-40fe-beeb-86d4a63c1694/FnnSkJAT93.json")
 st_lottie(lottie_book, speed=1, height=200, key="initial")         
 
 
