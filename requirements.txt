@@ -3,5 +3,5 @@ pickle
 base64
 pandas
 json
-plotly
+plotly == 4.0
 streamlit_lottie
