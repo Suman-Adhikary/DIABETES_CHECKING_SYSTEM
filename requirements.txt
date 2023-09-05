@@ -7,3 +7,4 @@ plotly
 streamlit_lottie
 requests
 path
+sklearn
