@@ -2,6 +2,6 @@ streamlit
 pickleshare
 bs4
 pandas
-json
+json5
 plotly
 streamlit_lottie
