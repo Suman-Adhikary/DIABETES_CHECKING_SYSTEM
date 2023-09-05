@@ -4,13 +4,19 @@ import pandas as pd
 from streamlit_lottie import st_lottie
 import json, requests
 import plotly.express as px
-import sys, path, os
+import sys, path
 
 
 dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
-with open('.\diabetes.csv', 'rb') as data:
-    dataset = pd.read_csv(data)
+
+@st.cache_data()
+def Data(path):
+    with open(path, 'rb') as data:
+        Dataframe = pd.read_csv(data)
+        return Dataframe
+    
+Data('./diabetes.csv')    
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
