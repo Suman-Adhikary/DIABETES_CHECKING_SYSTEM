@@ -4,11 +4,13 @@ import pandas as pd
 from streamlit_lottie import st_lottie
 import json, requests
 import plotly.express as px
-import sys, path
+import sys, path, os
 
-dir = path.Path(__file__)
-sys.path.append(dir.parent.parent)
-dataset = pd.read_csv('../Dataset/diabetes.csv')
+# dir = path.Path(__file__)
+# sys.path.append(dir.parent.parent)
+# dataset = pd.read_csv('../Dataset/diabetes.csv')
+
+dataset = os.getcwd() + './diabetes.csv'
 
 
 ########################################################### Setup Page Configer ######################################################
