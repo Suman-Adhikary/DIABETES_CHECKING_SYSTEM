@@ -164,7 +164,7 @@ New_Data = Conditional_Input(AGE, BMI, HB, BGL, GENDER, HT, SH, HD)
 ######################################################## Scaling New Data #########################################################
 @st.cache_data
 def Input_Scaling(Input_Data):
-    scaler = load(open(r'C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\Model And Scaling\Scale.pkl', 'rb'))
+    scaler = load(open('./Model And Scaling/Scale.pkl', 'rb'))
     Input_Data = scaler.transform([Input_Data])
     return Input_Data
 
@@ -176,7 +176,7 @@ New_Data[0:4] = Apply_scaling[0]
 ######################################################## Predict New Data ##########################################################
 @st.cache_data
 def Prediction(Data):
-    model = load(open(r'C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\Model And Scaling\model1.pkl', 'rb'))
+    model = load(open('./Model And Scaling/model1.pkl', 'rb'))
     pred = model.predict([New_Data])
     return pred
 
