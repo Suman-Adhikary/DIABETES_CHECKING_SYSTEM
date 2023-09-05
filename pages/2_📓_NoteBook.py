@@ -7,7 +7,7 @@ import plotly.express as px
 import sys, path
 
 dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
+sys.path.append(dir.parent.parent)
 dataset = pd.read_csv('./diabetes.csv')
 
 
