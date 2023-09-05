@@ -10,6 +10,7 @@ from pathlib import Path
 
 ######################################################### Setup File Directory ######################################################
 path = Path(__file__).parent / '../Dataset/diabetes.csv'
+path = Path(__file__).parent / '../Dataset/Gender_Vs_Diabetes.csv'
 dataset = pd.read_csv(path)
 
 ########################################################### Setup Page Configer ######################################################
