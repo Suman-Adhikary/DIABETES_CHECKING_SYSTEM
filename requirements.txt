@@ -6,5 +6,4 @@ json5
 plotly
 streamlit_lottie
 requests
-sys
 path
