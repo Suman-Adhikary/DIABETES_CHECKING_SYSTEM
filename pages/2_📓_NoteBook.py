@@ -7,7 +7,7 @@ import plotly.express as px
 import sys, path, os
 
 
-dir = path.Path(__file__).abspath()
+dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
 with open(r'C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\pages\diabetes.csv', 'rb') as data:
     dataset = pd.read_csv(data.read())
