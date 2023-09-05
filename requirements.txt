@@ -4,3 +4,4 @@ base64
 pandas
 json
 plotly
+streamlit_lottie
