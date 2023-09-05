@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
 
 ########################################################## Datase and Information #######################################################
-dataset = pd.read_csv(open('./diabetes.csv'))
+dataset = pd.read_csv(open('./diabetes.csv', 'rb'))
 @st.cache_data(experimental_allow_widgets=True)
 def Data():
     Col1, Col2 = st.columns(2)
