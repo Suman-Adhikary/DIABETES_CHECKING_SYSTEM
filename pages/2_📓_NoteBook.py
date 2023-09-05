@@ -6,7 +6,11 @@ import json, requests
 import plotly.express as px
 import sys, path, os
 
-dataset = pd.read_csv(r'C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\Dataset\diabetes.csv')
+
+dir = path.Path(__file__).abspath()
+sys.path.append(dir.parent.parent)
+with open('./diabetes.csv', 'rb') as data:
+    dataset = pd.read_csv(data.read())
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
