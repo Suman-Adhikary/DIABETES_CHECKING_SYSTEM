@@ -1,6 +1,6 @@
 streamlit
 pickleshare
-base64
+bs4
 pandas
 json
 plotly
