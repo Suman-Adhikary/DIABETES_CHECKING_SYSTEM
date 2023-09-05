@@ -196,6 +196,7 @@ def Feature_Viz():
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Gender_Diabetes, unsafe_allow_html=True)
         GD = '../Dataset/Gender_Vs_Diabetes.csv'
+        GD = pd.read_csv(GD)
         fig = px.bar(data_frame=GD, x="gender", y="counts", color="diabetes", barmode='stack', labels={"diabetes" : 'Diabetes', 'counts' : 'Count', 'gender' : 'Gender'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)
@@ -210,6 +211,7 @@ def Feature_Viz():
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Heart_Diabetes, unsafe_allow_html=True)
         HDD = '../Dataset/HeartDisease_Vs_Diabetes.csv'
+        HDD = pd.read_csv(HDD)
         fig = px.bar(data_frame=HDD, x="heart_disease", y="counts", color="diabetes", barmode='stack', labels={'diabetes' : 'Diabetes', 'heart_disease' : 'Heart Disease', 'counts' : 'Count'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig) 
@@ -224,6 +226,7 @@ def Feature_Viz():
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Hyper_Diabetes, unsafe_allow_html=True)
         HPD = '../Dataset/Hypertension_Vs_Diabetes.csv'
+        HPD = pd.read_csv(HPD)
         fig = px.bar(data_frame=HPD, x="hypertension", y="counts", color="diabetes", barmode='stack', labels={"diabetes" : 'Diabetes', 'counts' : 'Count', 'hypertension' : 'Hypertension'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)       
@@ -238,6 +241,7 @@ def Feature_Viz():
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Heart_Diabetes, unsafe_allow_html=True)
         SHH = '../Dataset/SmokingHistory_Vs_Diabetes.csv'
+        SHH = pd.read_csv(SHH)
         fig = px.bar(data_frame=SHH, x="smoking_history", y="counts", color="diabetes", barmode='stack', labels={'diabetes' : 'Diabetes', 'smoking_history' : 'Smoking History', 'counts' : 'Count'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)   
