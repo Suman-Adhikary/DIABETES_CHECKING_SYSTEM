@@ -27,7 +27,7 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 if __name__ == '__main__':
-    add_bg_from_local("https://github.com/Suman-Adhikary/DIABETES_CHECKING_SYSTEM/blob/main/Dataset/diabetes.csv")
+    add_bg_from_local('C:\Users\suman\OneDrive\Desktop\My\Git\Diabetes Check\Dataset\diabetes.csv')
 
 
 ############################################ Setup Page Header ###########################################################
