@@ -27,7 +27,7 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 if __name__ == '__main__':
-    add_bg_from_local("../Diabetes Check/Dataset/diabetes.csv")  
+    add_bg_from_local(r".\\Dataset\diabetes.csv")  
 
 
 ############################################ Setup Page Header ###########################################################
