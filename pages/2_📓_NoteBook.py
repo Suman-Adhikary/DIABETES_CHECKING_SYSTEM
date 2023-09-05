@@ -195,9 +195,8 @@ def Feature_Viz():
     with Col1:
         st.markdown(Fea_css, unsafe_allow_html=True)
         st.markdown(Gender_Diabetes, unsafe_allow_html=True)
-        dataset["diabetes"] = dataset['diabetes'].map({1 : 'Yes', 0 : 'No'})
-        df = dataset.groupby(by=["gender", "diabetes"]).size().reset_index(name="counts")
-        fig = px.bar(data_frame=df, x="gender", y="counts", color="diabetes", barmode='stack', labels={"diabetes" : 'Diabetes', 'counts' : 'Count', 'gender' : 'Gender'})
+        GD = '../Dataset/Gender_Vs_Diabetes.csv'
+        fig = px.bar(data_frame=GD, x="gender", y="counts", color="diabetes", barmode='stack', labels={"diabetes" : 'Diabetes', 'counts' : 'Count', 'gender' : 'Gender'})
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)
     
