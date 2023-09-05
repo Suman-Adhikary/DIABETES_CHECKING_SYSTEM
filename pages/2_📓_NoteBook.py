@@ -10,7 +10,7 @@ import sys, path, os
 dir = path.Path(__file__)
 sys.path.append(dir.parent.parent)
 with open('.\diabetes.csv', 'rb') as data:
-    dataset = pd.read_csv(data.read())
+    dataset = pd.read_csv(data)
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
