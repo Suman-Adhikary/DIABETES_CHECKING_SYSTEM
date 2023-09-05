@@ -11,11 +11,11 @@ import sys, path, os
 
 cwd = os.getcwd()  # Get the current working directory (cwd)
 files = os.listdir(cwd)  # Get all the files in that directory
-dataset = pd.read_csv(files[2])
+# dataset = pd.read_csv(files[2])
 
 
-# with open('./diabetes.csv', 'rb') as data:
-#     dataset = pd.read_csv(data)
+with open(files[2], 'rb') as data:
+    dataset = pd.read_csv(data)
 
 ########################################################### Setup Page Configer ######################################################
 st.set_page_config(page_title="notebook", layout="wide")
