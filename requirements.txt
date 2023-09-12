@@ -7,7 +7,7 @@ plotly
 streamlit_lottie
 requests
 path
-scikit-learn == 1.2.2
+scikit-learn
 pathlib
 catboost
 pipeline
