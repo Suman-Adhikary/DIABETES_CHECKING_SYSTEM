@@ -12,3 +12,4 @@ pathlib
 catboost
 pipeline
 imblearn
+imbalanced-learn
