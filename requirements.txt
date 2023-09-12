@@ -11,3 +11,4 @@ scikit-learn
 pathlib
 catboost
 pipeline
+imblearn
