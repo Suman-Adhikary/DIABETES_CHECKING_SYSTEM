@@ -67,6 +67,8 @@ if __name__ == '__main__':
 #Set columns.
 col1, col2, col3 = st.columns(3)
 
+USER_INPUT = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 @st.cache_data()
 def process_input(input_value):
     result = input_value
@@ -75,56 +77,57 @@ def process_input(input_value):
 # Age Column.
 with col1:
     AGE = st.number_input("Age", value=0)
-AGE = process_input(AGE)
+    USER_INPUT[0] = process_input(AGE)
 
 # Bmi Column.
 with col1:
     BMI = st.number_input('Body Mass Index', value=0)
-BMI = process_input(BMI)
+    USER_INPUT[1] = process_input(BMI)
 
 # HbA1c Column.
 with col1:
     HB = st.number_input('HbA1c Level', value=0)
-HB = process_input(BMI)
+    USER_INPUT[2] = process_input(HB)
 
 # Blood Glucose Level Column.
 with col1:
     BGL = st.number_input('Blood Glucose Level', value=0)
-BGL = process_input(BMI)
-
-# Gender column.
-with col1:
-    GENDER = st.selectbox('Gender', ('Male', 'Female'))
-GENDER = process_input(GENDER)
+    USER_INPUT[3] = process_input(BGL)
 
 # Hypertension Column.
 with col1:
     HT = st.selectbox('Hypertension', ('Yes', 'No'))
-HT = process_input(HT)  
-
-# Smoking History column.
-with col1:
-    SH = st.selectbox('Smoking History', ('current', 'non_smoker', 'past_smoker'))
-SH = process_input(SH)
+    USER_INPUT[4] = process_input(HT)  
 
 # Heart Disease column.
 with col1:
     HD = st.selectbox('Heart Disease', ('Yes', 'No'))
-HD = process_input(HD)   
+    USER_INPUT[5] = process_input(HD)   
+
+# Gender column.
+with col1:
+    GENDER = st.selectbox('Gender', ('Male', 'Female'))
+    USER_INPUT[6] = process_input(GENDER)
+
+# Smoking History column.
+with col1:
+    SH = st.selectbox('Smoking History', ('current', 'non_smoker', 'past_smoker'))
+    USER_INPUT[7] = process_input(SH)
       
 
 ################################################# Conditional User Input #####################################################
 @st.cache_data
 def user_input():
-    if HT == 'Yes':
-        HT = 1
-    else: 
-        HT = 0
-    if HD == 'Yes':
-        HD = 1
-    elif HD == 'No':
-        HD = 0            
-    new_data = pd.DataFrame({'age' : AGE, 'bmi' : BMI, 'HbA1c_level' : HB, 'blood_glucose_level' : BGL, 'hypertension' : 1, 'heart_disease' : HT, 'gender' : GENDER, 'smoking_history' : SH}, index = [0])
+    if USER_INPUT[4] == 'Yes':
+        USER_INPUT[4] = 1
+    elif USER_INPUT[4] == 'No':
+        USER_INPUT[4] = 0
+    if USER_INPUT[5]== 'Yes':
+        USER_INPUT[5] = 1
+    elif USER_INPUT[5] == 'No':
+        USER_INPUT[5] = 0            
+    new_data = pd.DataFrame({'age' : USER_INPUT[0], 'bmi' : USER_INPUT[1], 'HbA1c_level' : USER_INPUT[2], 'blood_glucose_level' : USER_INPUT[3], 'hypertension' : USER_INPUT[4], 
+                             'heart_disease' : USER_INPUT[5], 'gender' : USER_INPUT[6], 'smoking_history' : USER_INPUT[7]}, index = [0])
     return new_data
 
 
