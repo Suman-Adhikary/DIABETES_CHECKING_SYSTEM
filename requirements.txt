@@ -9,3 +9,4 @@ requests
 path
 scikit-learn
 pathlib
+catboost
