@@ -10,3 +10,4 @@ path
 scikit-learn
 pathlib
 catboost
+pipeline
