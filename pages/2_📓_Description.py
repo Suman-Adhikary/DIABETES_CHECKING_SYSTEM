@@ -118,7 +118,7 @@ def Data():
         head = """
             <h2 class="header">
                 Data Information
-            </h2>
+            </h2> 
         """
         css_ = """
         <style>
@@ -298,7 +298,8 @@ def Feature_Viz():
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)        
 
-Feature_Viz()        
+if __name__ == "__main__":
+    Feature_Viz()        
 
 
 ##################################################################### Important Diabetes ################################################################

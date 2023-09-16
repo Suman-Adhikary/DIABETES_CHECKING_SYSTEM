@@ -2,9 +2,8 @@
 import pandas as pd
 import streamlit as st
 from pickle import load
-import base64, os
+import base64
 import sys, path
-from catboost import CatBoostClassifier
 
 
 ########################################## Setup File Directory #########################################################
@@ -17,7 +16,7 @@ st.set_page_config(layout="wide", page_title="Diabetes Check")
 
 
 ######################################### Setup Page BackGround #########################################################
-@st.cache_data()
+@st.cache_data
 def add_bg_from_local(image_file):
     st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
     with open(image_file, "rb") as image_file:
@@ -38,7 +37,7 @@ add_bg_from_local('./Images/Main_60.jpg')
 
 
 ############################################ Setup Page Header ###########################################################
-@st.cache_data()
+@st.cache_data
 def header():
     custom_css = """
         <style>
@@ -47,14 +46,21 @@ def header():
                 text-align: left;
                 font-size: 66px;
                 font-weight: bold;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
         </style>
     """
 
     head = """
         <h1 class="header">
-            Diabetes
+            <font color="#2d00f7">D</font>
+            <font color="#6a00f4">I</font>
+            <font color="#8900f2">A</font>
+            <font color="#a100f2">B</font>
+            <font color="#b100e8">E</font>
+            <font color="#d100d1">T</font>
+            <font color="#e500a4">E</font>
+            <font color="#f20089">S</font>
         </h1>
     """
     st.markdown(custom_css, unsafe_allow_html=True)
@@ -69,7 +75,7 @@ col1, col2, col3 = st.columns(3)
 
 USER_INPUT = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-@st.cache_data()
+@st.cache_data
 def process_input(input_value):
     result = input_value
     return result
@@ -142,7 +148,11 @@ def Prediction():
 ####################################################### Button For Prediction #######################################################
 with col1:
     if st.button('Check'):
+        st.cache_data.clear()
         if Prediction()[0] == 1:
             st.write('Yes')
+            st.cache_data.clear()
         else:
-            st.write('No')    
+            st.cache_data.clear()
+            st.write('No')
+            st.cache_data.clear()
