@@ -34,7 +34,7 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 
-add_bg_from_local('./Images/Main.jpg')
+add_bg_from_local('./Images/Main_60.jpg')
 
 
 ############################################ Setup Page Header ###########################################################
@@ -81,12 +81,12 @@ with col1:
 
 # Bmi Column.
 with col1:
-    BMI = st.number_input('Body Mass Index', value=0)
+    BMI = st.number_input('Body Mass Index', step=1.,format="%.f")
     USER_INPUT[1] = process_input(BMI)
 
 # HbA1c Column.
 with col1:
-    HB = st.number_input('HbA1c Level', value=0)
+    HB = st.number_input('HbA1c Level', step=1.,format="%.f")
     USER_INPUT[2] = process_input(HB)
 
 # Blood Glucose Level Column.
