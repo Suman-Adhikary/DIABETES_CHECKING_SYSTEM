@@ -65,8 +65,7 @@ def header():
     """
     st.markdown(custom_css, unsafe_allow_html=True)
     st.markdown(head, unsafe_allow_html=True)
-if __name__ == '__main__':
-    header()   
+header()   
 
 
 ####################################### Setup Page Column and User input ##################################################
