@@ -136,7 +136,7 @@ def user_input():
     return new_data
 
 
-######################################################## Predict New Data ##########################################################
+######################################################## Predict New Data ########################################################
 @st.cache_data
 def Prediction():
     model = load(open('./Model And Scaling/CAT_BOOST.pkl', 'rb'))
@@ -144,14 +144,34 @@ def Prediction():
     return pred
 
 
-####################################################### Button For Prediction #######################################################
+####################################################### Button For Prediction #####################################################
+CSS = """
+    <style>
+        .header{
+                text-align: left;
+                font-size: 30px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }    
+    </style>
+"""
+
+HEAD_YES = """
+        <h6 class="header" style="color:#ff5a5f"> You Have Diabetes. </h6>
+"""
+
+HEAD_NO = """
+    <h6 class="header" style="color:#affc41"> You Don't Have Diabetes. </h6>
+"""
+
 with col1:
     if st.button('Check'):
         st.cache_data.clear()
         if Prediction()[0] == 1:
-            st.write('Yes')
+            st.markdown(CSS, unsafe_allow_html=True)
+            st.markdown(HEAD_YES, unsafe_allow_html=True)
             st.cache_data.clear()
         else:
             st.cache_data.clear()
-            st.write('No')
+            st.markdown(CSS, unsafe_allow_html=True)
+            st.markdown(HEAD_NO, unsafe_allow_html=True)
             st.cache_data.clear()

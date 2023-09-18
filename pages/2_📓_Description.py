@@ -71,8 +71,8 @@ def Main_Header():
     """
     st.markdown(header_css, unsafe_allow_html=True)
     st.markdown(Main_head, unsafe_allow_html=True)
-if __name__ == '__main__':
-    Main_Header()
+    
+Main_Header()
 
 
 ########################################################## Datase and Information #######################################################
@@ -142,8 +142,7 @@ def Data():
         st.markdown(css_, unsafe_allow_html=True)
         st.markdown(a, unsafe_allow_html=True)
 
-if __name__ == '__main__':
-    Data()        
+Data()        
 
 
 ############################################################## Data Visualization ############################################################
@@ -172,8 +171,7 @@ def Viz_Header():
     """
     st.markdown(css_viz, unsafe_allow_html=True)
     st.markdown(vi_head, unsafe_allow_html=True)
-if __name__ == '__main__':
-    Viz_Header()   
+Viz_Header()   
 
 
 ############################################################# Each Feature Visualization #######################################################
@@ -298,8 +296,7 @@ def Feature_Viz():
         fig.update_layout(xaxis=dict(showgrid=False), yaxis=dict(showgrid=False))
         st.plotly_chart(fig)        
 
-if __name__ == "__main__":
-    Feature_Viz()        
+Feature_Viz()        
 
 
 ##################################################################### Important Diabetes ################################################################
@@ -329,8 +326,7 @@ def Imp_Header():
     """
     st.markdown(css_viz, unsafe_allow_html=True)
     st.markdown(vi_head, unsafe_allow_html=True)
-if __name__ == '__main__':
-    Imp_Header()
+Imp_Header()
 
 
 ################################################################# Important Image For Diabetes ##############################################################
@@ -376,5 +372,4 @@ def Imp_Img():
     st.markdown(custom_css, unsafe_allow_html=True)
     st.markdown('<div class="centered-image-container"><img class="centered-image" src="https://www.breathewellbeing.in/blog/wp-content/uploads/2021/03/shutterstock_1547126156.png" alt="Centered Image"></div>', unsafe_allow_html=True)
 
-if __name__ == '__main__':
-    Imp_Img()    
+Imp_Img()    
