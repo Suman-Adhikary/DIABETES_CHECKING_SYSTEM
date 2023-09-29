@@ -147,7 +147,7 @@ def Prediction():
 ####################################################### Button For Prediction #####################################################
 CSS = """
     <style>
-        .header{
+        .header_pred{
                 text-align: left;
                 font-size: 30px;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -156,11 +156,11 @@ CSS = """
 """
 
 HEAD_YES = """
-        <h6 class="header" style="color:#ff5a5f"> You Have Diabetes. </h6>
+        <h6 class="header_pred" style="color:#ff5a5f"> You Have Diabetes. </h6>
 """
 
 HEAD_NO = """
-    <h6 class="header" style="color:#affc41"> You Don't Have Diabetes. </h6>
+    <h6 class="header_pred" style="color:#affc41"> You Don't Have Diabetes. </h6>
 """
 
 with col1:
