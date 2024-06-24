@@ -1,16 +1,16 @@
-streamlit
-pickleshare
-bs4
-pandas
-json5
-plotly
-streamlit_lottie
-requests
-path
+streamlit == 1.36.0
+pickleshare == 0.7.5
+bs4 == 0.0.2
+pandas == 2.2.2
+json5 == 0.9.25
+plotly == 5.22.0
+streamlit_lottie == 0.0.5
+requests == 2.32.3
+path == 16.14.0
 scikit-learn==1.2.2
-pathlib
-catboost
-pipeline
-imblearn
-imbalanced-learn
+pathlib == 1.0.1
+catboost == 1.2.5
+pipeline == 0.1.0
+imblearn == 0.0
+imbalanced-learn == 0.12.3
 numpy==1.26.4
