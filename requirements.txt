@@ -13,3 +13,4 @@ catboost
 pipeline
 imblearn
 imbalanced-learn
+numpy==1.26.4
